@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Okafor Movies - trending Nigerian movie collection and feature films.">
+    <title>Okafor Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand-wrap">
+                <span class="brand-badge">Movies</span>
+                <div>
+                    <p class="eyebrow">Featured Collection</p>
+                    <h1>Okafor Movies</h1>
+                </div>
+            </div>
+            <a href="#videoGallery" class="primary-btn">Browse movies</a>
+        </header>
+
+        <main class="container">
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="tag">Nigerian cinema • classics • trending stories</p>
+                    <h2>Watch the best Nigerian movies, romance, comedy, and drama in one place.</h2>
+                    <p>Get the best Nigerian movies, cartoon and White movies.</p>
+                </div>
+                <div class="hero-stats" aria-label="movie collection stats">
+                    <div>
+                        <strong>24+</strong>
+                        <span>Featured titles</span>
+                    </div>
+                    <div>
+                        <strong>HD</strong>
+                        <span>Streaming quality</span>
+                    </div>
+                    <div>
+                        <strong>Fresh</strong>
+                        <span>Updated picks</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-section" aria-labelledby="gallery-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Collection</p>
+                        <h3 id="gallery-title">Latest movies</h3>
+                    </div>
+                    <div class="toolbar-right">
+                        <label class="search-box" for="videoSearch">
+                            <span class="search-icon" aria-hidden="true">⌕</span>
+                            <input id="videoSearch" type="search" placeholder="Search movies..." aria-label="Search movies">
+                        </label>
+                        <button id="clearSearchBtn" type="button" class="secondary-btn" aria-label="Clear search">Clear</button>
+                        <span class="count-pill">Trending now</span>
+                    </div>
+                </div>
+
+                <div class="filter-bar" aria-label="Movie categories">
+                    <button type="button" class="filter-btn active" data-filter="All">All</button>
+                    <button type="button" class="filter-btn" data-filter="Drama">Drama</button>
+                    <button type="button" class="filter-btn" data-filter="Romance">Romance</button>
+                    <button type="button" class="filter-btn" data-filter="Action">Action</button>
+                    <button type="button" class="filter-btn" data-filter="Comedy">Comedy</button>
+                    <button type="button" class="filter-btn" data-filter="Animation">Animation</button>
+                    <button type="button" class="filter-btn" data-filter="Family">Family</button>
+                    <button type="button" class="filter-btn" data-filter="Thriller">Thriller</button>
+                    <button type="button" class="filter-btn" data-filter="Featured">Featured</button>
+                    <button type="button" class="filter-btn" data-filter="Uploaded">Uploaded</button>
+                </div>
+
+                <div class="upload-panel" aria-label="Add your own videos">
+                    <div>
+                        <p class="eyebrow">Your library</p>
+                        <h4>Add your own videos</h4>
+                    </div>
+                    <div class="upload-actions">
+                        <label class="upload-button" for="videoUpload">Choose videos</label>
+                        <input id="videoUpload" type="file" accept="video/*" multiple>
+                        <span id="uploadStatus" class="upload-status">Saved in your browser for future visits on this device.</span>
+                    </div>
+                </div>
+
+                <div id="videoGallery" class="video-grid" aria-live="polite"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
